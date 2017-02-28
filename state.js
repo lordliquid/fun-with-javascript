@@ -28,7 +28,9 @@ class State {
 };
 
 var state = new State('My State');
+var myfunc = () => { return 'function' }
+state.setState({test: myfunc });
 
-state.setState({test: 'tes', test2: 'test'});
+console.log(state.test())
 
 console.log(state.getState());
